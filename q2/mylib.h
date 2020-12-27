@@ -8,7 +8,7 @@ int inputLine(char **w);
 
 char ***getText(int *countNumOfLines);
 
-void printOnlyLines(char ***text, int numOFLines, char *word);
+void printOnlyLines(char ***text, int* numOFLines, char *word);
 
 int searchInLine(char **Line, char *word);
 

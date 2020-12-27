@@ -16,7 +16,7 @@ char *getWord()
     else
     {
         printf("Enter your word  \n");
-        scanf("%s", word);
+        scanf("%s ", word);//First scan
     }
     return word;
 }
@@ -51,12 +51,12 @@ void menu(char *word)
 
 char ***getText(int *countNumOfLines)
 {
-#define numOfLines 250
+#define numOfLines 249
 #define MAX 64000 //256*250 MAX OF CHARS IN TEXT.
     *countNumOfLines = 0;
     char ***text;
-    text = (char ***)malloc(sizeof(char) * MAX); //check if thee memory.
-    if (text = !NULL)
+    text = (char ***)malloc(sizeof(char) * MAX); //check if theרe memory.
+    if (text)
     {
         char ***ptr = text; // his pointing to the first line.
 
@@ -81,27 +81,32 @@ int inputLine(char **w)
         {
             endLine = 0;
         }
+
         w++;
+
     }
     return numOfCharInLine;
 }
 
 int getword(char *w)
 {
-    int numOfCharInWord = 0;
-#define WordSize 30
-    char c;
-    char v = ' ';
-    while ((c = !v) && (numOfCharInWord <= 30))
-    { // word didnt end , word didnt pass the limit.
-        scanf(" %c", w);
-        w++;
-        numOfCharInWord++;
-    }
-    return numOfCharInWord;
+//     int numOfCharInWord = 0;
+// #define WordSize 30
+//     char c;
+//     char v = ' ';
+//     while ((c = !v) && (numOfCharInWord <= 30))
+//     { // word didnt end , word didnt pass the limit.
+//         scanf(" %c", w);
+//         w++;
+//         numOfCharInWord++;
+//     }
+
+scanf("%s", w);
+    return strlen(w);
+    
 }
 
-void printOnlyLines(char ***text, int numOFLines, char *word)
+void printOnlyLines(char ***text, int* numOFLines, char *word)
 {
     for (int i = 0; i < numOfLines; i++)
     {

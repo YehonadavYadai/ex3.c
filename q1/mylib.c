@@ -14,9 +14,9 @@ void shift_element(int* arr, int i){
     free(arr);
 }
 void put (int *arr , int size){
-
+printf("choose number:" );
 for(int i = 0 ; i<size ;i++){
-  printf("choose number:" );
+  
     scanf("%d", arr+i);
  } 
 }
