@@ -1,9 +1,9 @@
 MAIN_O=main.o
 OTHER_O=mylib.o
-C=gcc -g
+C=gcc -g -wall
 
-all:final
-final:$(MAIN_O) mylib.so    
+all: final
+final: $(MAIN_O) mylib.so    
     $(C) $(MAIN_O) ./mylib.so -o $@
 mylib.so=$(OTHER_O)
     $(C) -shared $^ -o $@
