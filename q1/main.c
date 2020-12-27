@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "MyLib.c"
+#include "mylib.h"
 #include <stdlib.h>
 #define size 50
 int main () {
